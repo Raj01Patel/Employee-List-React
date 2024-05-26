@@ -1,0 +1,121 @@
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 40px auto;
+
+}
+
+.employee-list {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.team-list {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.employee-list,
+.team-list {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.employee-list h2,
+.team-list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.employee-list ul,
+.team-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.employee-list li,
+.team-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+li:hover {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+
+.employee-list li:last-child,
+.team-list li:last-child {
+  border-bottom: none;
+}
+
+.employee-list button,
+.team-list button {
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.employee-list button {
+  background-color: #007bff;
+}
+
+.team-list button {
+  background-color: rgb(245, 50, 50);
+}
+
+
+.employee-list button:hover {
+  background-color: #0069d9;
+}
+
+.team-list button:hover {
+  background-color: rgb(252, 78, 78);
+}
+
+.sort {
+  margin-bottom: 1rem;
+}
+
+.age {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+}
+
+.team-list ul p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.team-list ul p {
+  color: red;
+
+}
+
+@media (max-width: 768px) {
+
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .employee-list,
+  .team-list {
+    max-height: 300px;
+  }
+}
